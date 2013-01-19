@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Kalkulator Odwróconej Notacji Polskiej</title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.0.min.js"></script>
+	<script type="text/javascript" src="onp.js"></script>
+	<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap.no-icons.min.css" rel="stylesheet">
+	<style type="text/css">
+		body {font-size:16px;font-family:Helvetica,Tahoma,sans-serif;}
+		#calculator {width:60%;min-width:600px;padding:1.5em 3em;margin:4em auto;  border: 1px solid #ddd;-webkit-border-radius: 6px;-moz-border-radius: 6px;border-radius: 6px;-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.075);-moz-box-shadow: 0 1px 2px rgba(0,0,0,.075);box-shadow: 0 1px 2px rgba(0,0,0,.075);}
+		h1 {font-size:1.8em;}
+		h2 {font-size:1.4em;margin-bottom:1em}
+		.result {margin-bottom:1em;display:block;font-size:1.2em;}
+
+		#result-box {display: none;}
+
+		form {padding:2em;display: block;}
+		form label {margin-bottom:1em;display:block;}
+		form input[type="text"] {display:block;width:100%;margin:0 auto 1em auto;line-height:1.2em;padding:0.5em 1em;font-size:1em;height:2.6em;box-sizing:border-box;-webkit-box-sizing:border-box;}
+
+	</style>
+</head>
+<body>
+
+	<section id="calculator">
+		<h1>Kalkulator Odwróconej Notacji Polskiej</h1>
+
+		<form id="from-expression" class="form well">
+			<label for="expression">Podaj wyrażenie artmetyczne</label>
+			<input type="text" id="expression" value="(1+2)*3">
+
+			<button type="submit" class="btn btn-success">Oblicz</button>
+		</form>
+
+		<article id="result-box">
+			<h2>Po przekształceniu wyrażenia w ONP</h2>
+			<strong id="expToOnp" class="well result"></strong>
+			<h2>Wynik to:</h2>
+			<strong id="result" class="well result"></strong>
+		</article>
+	</section>
+
+</body>
+</html>
