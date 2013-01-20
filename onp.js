@@ -123,7 +123,7 @@ $(function(){
 
 		$('#result-box').show();
 		calc.parse($('#expression').val());
-		$('#expToOnp').text(calc.printStack(calc.stack, '; '));
+		$('#exp-to-onp').text(calc.printStack(calc.stack, '; '));
 
 		$('#result').text(calc.calc());
 		
